@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT2092 Tutorial 10</title>
+    <link rel="stylesheet" href="css/3d.css">
+    <link rel="stylesheet" href="css/snowflake.css">
+    <link rel="stylesheet" href="css/smile.css">
+</head>
+<style>
+    .test{
+        width: 100px;
+        height: 100px;
+        background-color: #3c29a0;
+        margin-left: 20px;
+        margin-top: 50px;
+        position: absolute;
+    }
+    .santa_cc:hover .test{
+        background-color: #BDD7EE;
+        transform: translatey(-100px);
+        transition-duration: 3s;
+    }i
+</style>
+<body style=" zoom: 0.7; -moz-transform: scale(0.7); -moz-transform-origin: 0 0; ">
+<!--<div class="music" style="width:20px;height: 20px;background-color: #5cabff" ></div>-->
+
+<a href="javascript:" onclick="startsnow();this.onclick=function(){stopsnow()}" ><img src="images/xuehua.png" id="img_xuehua" ></a>
+
+</audio>
+<div class="music" style="margin-left:-1400px ;width: auto;height:auto; background-color: ">
+
+    <audio src="music/chris.mp3" id="aud"></audio>
+    <img src="images/play.png" id="playpause"  />
+</div>
+<div class="object head" translate="" style="margin-top: 900px;margin-right: 600px;position: absolute;float: left" onclick="">
+   <div id="snowflake_box"style="position: absolute;width: 200px;height: 80px;background-color:" >
+        <canvas id="snowflake" ></canvas>
+    </div>
+    <div class="room" style="margin-top:-380px; position: relative">
+        <img class="face room " src="images/graphic-3779076_640.png" width="638" height="640">
+    </div>
+
+    <div class="santa_cc" style="margin-top:-330px; position: relative">
+
+        <div style="width: auto;height: auto">
+            <img class="face mustache" src="images/santa-cc/mustache.png" width="182" height="96">
+            <img class="face front" src="images/santa-cc/head-front.png" width="142" height="96" draggable="false">
+            <img class="face back" src="images/santa-cc/head-back.png"width="142" height="96" draggable="false">
+            <img class="face left" src="images/santa-cc/head-left.png"width="96" height="96" draggable="false">
+            <img class="face right" src="images/santa-cc/head-right.png"width="96" height="96" draggable="false">
+            <img class="face top" src="images/santa-cc/head-top.png"width="142" height="96" draggable="false">
+            <img class="face bottom" src="images/santa-cc/head-bottom.png"width="142" height="96" draggable="false">
+        </div>
+        <div style="margin-top: 140px;margin-left: 20px; position: absolute;float: left">
+            <img class="mybody body_front" src="images/santa-cc/body-front.png" width="92" height="92" draggable="false">
+            <img class="mybody body_back" src="images/santa-cc/body-back.png" width="92" height="92" draggable="false">
+            <img class="mybody body_left" src="images/santa-cc/body-left-right.png" width="92" height="92" draggable="false">
+            <img class="mybody body_right" src="images/santa-cc/body-left-right.png" width="92" height="92" draggable="false">
+            <img class="mybody body_top" src="images/santa-cc/body-top.png" width="92" height="92" draggable="false">
+            <img class="mybody body_bottom" src="images/santa-cc/body-bottom.png" width="92" height="92" draggable="false">
+        </div>
+
+        <div  class="arm-right" style="margin-top: 145px;margin-left: -10px; position: absolute;">
+            <img class="arm right_arm_front" src="images/santa-cc/arm-left.png" width="35" height="68" draggable="false">
+            <img class="arm right_arm_back" src="images/santa-cc/arm-left.png" width="35"height="68" draggable="false">
+            <img class="arm right_arm_left" src="images/santa-cc/arm-left.png" width="35"height="68" draggable="false">
+            <img class="arm right_arm_right" src="images/santa-cc/arm-left.png" width="35"height="68" draggable="false">
+            <img class="arm right_arm_top" src="images/santa-cc/arm-leg-top.png" width="35" height="34.5" draggable="false">
+            <img class="arm right_arm_bottom" src="images/santa-cc/arm-bottom.png" width="35" height="34.5" draggable="false">
+        </div>
+        <div  class="arm-left" style="margin-top: 145px;margin-left: 110px; position: absolute;" >
+            <img class="arm left_arm_front" src="images/santa-cc/arm-left.png" width="35" height="68" draggable="false">
+            <img class="arm left_arm_back" src="images/santa-cc/arm-left.png" width="35"height="68" draggable="false">
+            <img class="arm left_arm_left" src="images/santa-cc/arm-left.png" width="35"height="68" draggable="false">
+            <img class="arm left_arm_right" src="images/santa-cc/arm-left.png" width="35"height="68" draggable="false">
+            <img class="arm left_arm_top" src="images/santa-cc/arm-leg-top.png" width="35" height="34.5" draggable="false">
+            <img class="arm left_arm_bottom" src="images/santa-cc/arm-bottom.png" width="35" height="34.5" draggable="false">
+        </div>
+        <div  class="leg" style="margin-top: 230px;margin-left: 30px; position: absolute;" >
+            <img class="leg leg_front" src="images/santa-cc/leg-front.png" width="68.5" height="34" draggable="false">
+            <img class="leg leg_back" src="images/santa-cc/leg-back.png" width="68.5" height="34"  draggable="false">
+            <img class="leg leg_left" src="images/santa-cc/leg-left-right-back.png" width="68.5" height="34.5" draggable="false">
+            <img class="leg leg_right" src="images/santa-cc/leg-left-right-back.png" width="68.5" height="34.5" draggable="false">
+
+        </div>
+
+    </div>
+
+
+    <!--reindeer-cc-->
+    <div class="reindeer-cc" style="margin-top:-0px;margin-left: 400px">
+        <div style="width: auto;height: auto">
+            <img class="face corner_left" src="images/reindeer-cc/corner_left.png" width="49" height="45">
+            <img class="face corner_right" src="images/reindeer-cc/corner_right.png" width="49" height="45">
+            <img class="face front" src="images/reindeer-cc/head-front.png" width="142" height="96" draggable="false">
+            <img class="face back" src="images/reindeer-cc/head-back.png"width="142" height="96" draggable="false">
+            <img class="face left" src="images/reindeer-cc/head-left.png"width="96" height="96" draggable="false">
+            <img class="face right" src="images/reindeer-cc/head-right.png"width="96" height="96" draggable="false">
+            <img class="face top" src="images/reindeer-cc/head-top.png"width="142" height="96" draggable="false">
+            <img class="face bottom" src="images/reindeer-cc/head-bottom.png"width="142" height="96" draggable="false">
+        </div>
+        <div style="margin-top: 140px;margin-left: 20px; position: absolute;float: left">
+            <img class="mybody body_front" src="images/reindeer-cc/body-front.png" width="92" height="92" draggable="false">
+            <img class="mybody body_back" src="images/reindeer-cc/body-back.png" width="92" height="92" draggable="false">
+            <img class="mybody body_left" src="images/reindeer-cc/body-left-right.png" width="92" height="92" draggable="false">
+            <img class="mybody body_right" src="images/reindeer-cc/body-right.png" width="92" height="92" draggable="false">
+            <img class="mybody body_top" src="images/reindeer-cc/body-top.png" width="92" height="92" draggable="false">
+            <img class="mybody body_bottom" src="images/reindeer-cc/body-bottom.png" width="92" height="92" draggable="false">
+        </div>
+
+
+        <div  class="leg" style="margin-top: 230px;margin-left: 30px; position: absolute;" >
+            <img class="leg leg_front" src="images/reindeer-cc/leg-front.png" width="68.5" height="34" draggable="false">
+            <img class="leg leg_back" src="images/reindeer-cc/leg-back.png" width="68.5" height="34"  draggable="false">
+            <img class="leg leg_left" src="images/reindeer-cc/leg-left-right-back.png" width="68.5" height="34.5" draggable="false">
+            <img class="leg leg_right" src="images/reindeer-cc/leg-right-back.png" width="68.5" height="34.5" draggable="false">
+
+        </div>
+
+    </div>
+
+    <div class="platform" style="margin-top: 20px; position: absolute; " >
+
+        <div class="platform platform_front" style="width: 1200px;height: 100px;background-color: #BDD7EE" ></div>
+        <div class="platform platform_back" style="width: 1200px;height: 100px;background-color: #BDD7EE" ></div>
+        <div class="platform platform_top" style="width: 1200px;height: 600px;background-color: lightskyblue;background: " ><img src="images/ice-2065622_1920.jpg "width="1200" height="600"></div>
+        <div class="platform platform_bottom" style="width: 1200px;height: 600px;background-color: #DEEBF7" ></div>
+        <div class="platform platform_left" style="width: 600px;height: 100px;background-color: #BDD7EE" ></div>
+        <div class="platform platform_right" style="width: 600px;height: 100px;background-color: #BDD7EE " ></div>
+    </div>
+
+    <div class="tree1" style="margin-top:-380px; position: absolute">
+        <img class="face tree " src="images/tree-4633768_1920.png" width="240" height=360">
+    </div>
+    <div class="tree2" style="margin-top:-380px; position: absolute">
+        <img class="face tree " src="images/tree-4633768_1920.png" width="240" height=360">
+    </div>
+    <div class="snowman" style="margin-top:-380px; position: absolute">
+        <img class="face tree " src="images/snowman.png" width="120" height=180">
+    </div>
+
+    <div class="smile" style="margin-top:-380px; position: absolute">
+        <img class="face smile " src="images/yum.png" width="170" height="150">
+    </div>
+
+
+
+</div>
+
+
+<script>
+
+
+  function startsnow() {
+
+      setInterval(DrawSnow, 50)
+
+  }
+
+</script>
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/3d.js"></script>
+<script src="js/snowflake.js"></script>
+<script src="js/music.js"></script>
+
+</body>
+
+</html>
