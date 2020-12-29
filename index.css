@@ -1,0 +1,140 @@
+
+img{
+    float: left;
+}
+#content_k{
+    width:1100px;
+    height:700px;
+    background-color:white;
+    /*opacity: 0.5;*/
+
+    /*-webkit-transform:scale(0.5);*/
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+#title{
+    width: 860px;
+    height: auto;
+
+}
+#label{
+    width:100px;
+    height: 40px;
+    background-color: white;
+    opacity: 0.95;
+    float: left;
+    position: absolute;
+    z-index: 10;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+    line-height: 40px;
+
+}
+
+#img1{
+    float: left;
+    position: absolute;
+}
+#img2{
+    float: left;
+    position: absolute;
+    margin-left: 310px;
+}
+#img3{
+    float: left;
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 250px;
+}
+#img4{
+    float: left;
+    position: absolute;
+    margin-left: 470px;
+    margin-top: 250px;
+}
+#line1{
+    float: left;
+    position: absolute;
+    width:400px;
+    height: 10px;
+    margin-left: 630px;
+    margin-top: -8px;
+}
+#line2{
+    float: left;
+    position: absolute;
+    width:400px;
+    height: 10px;
+    margin-left: 630px;
+    margin-top: 495px;
+}
+#label1{
+    float: left;
+    position: absolute;
+    width:150px;
+    height: 45px;
+    background-color: palegreen;
+    margin-left: 630px;
+    margin-top: 25px;
+    line-height: 45px;
+    text-align: center;
+}
+#introduce1{
+    float: left;
+    position: absolute;
+    width:400px;
+    height: 245px;
+    /*background-color: #ccc;*/
+    margin-left: 630px;
+    margin-top: 85px;
+}
+#label2{
+    float: left;
+    position: absolute;
+    width:150px;
+    height: 45px;
+    background-color: palegreen;
+    margin-left: 630px;
+    margin-top: 305px;
+    line-height: 45px;
+    text-align: center;
+}
+#introduce2{
+    float: left;
+    position: absolute;
+    width:400px;
+    height: 95px;
+    /*background-color: #ccc;*/
+    margin-left: 630px;
+    margin-top: 365px;
+}
+#category{
+    float: left;
+    position: absolute;
+    width:150px;
+    height: 45px;
+    background-color: palegreen;
+    margin-left: 880px;
+    margin-top: 510px;
+    line-height: 45px;
+    text-align: center;
+}
+
+#hrefs{
+    background-color: black;
+    opacity: 0.5;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+}
